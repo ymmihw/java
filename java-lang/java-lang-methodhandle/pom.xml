@@ -9,7 +9,6 @@
  </parent>
  <groupId>com.ymmihw.java.lang</groupId>
  <artifactId>java-lang-methodhandle</artifactId>
- <version>0.0.1-SNAPSHOT</version>
  <name>java-lang-methodhandle</name>
  <url>http://maven.apache.org</url>
  <properties>

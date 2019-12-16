@@ -7,9 +7,7 @@
   <artifactId>java-lang</artifactId>
   <version>0.0.1-SNAPSHOT</version>
  </parent>
- <groupId>com.ymmihw.java</groupId>
  <artifactId>java-lang-classloader</artifactId>
- <version>0.0.1-SNAPSHOT</version>
  <name>java-lang-classloader</name>
  <url>http://maven.apache.org</url>
  <properties>

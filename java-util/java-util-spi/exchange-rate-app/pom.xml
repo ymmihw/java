@@ -9,7 +9,6 @@
  </parent>
  <groupId>com.ymmihw.java.util.spi</groupId>
  <artifactId>exchange-rate-app</artifactId>
- <version>0.0.1-SNAPSHOT</version>
  <name>exchange-rate-app</name>
  <url>http://maven.apache.org</url>
  <properties>

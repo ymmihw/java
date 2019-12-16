@@ -38,6 +38,7 @@ public class MethodHandlesTest {
     MethodType mt = MethodType.methodType(List.class, Object[].class);
     MethodHandle asListMH = publicLookup.findStatic(Arrays.class, "asList", mt);
 
+    @SuppressWarnings("unchecked")
     List<Integer> list = (List<Integer>) asListMH.invokeWithArguments(1, 2);
 
     assertThat(Arrays.asList(1, 2), is(list));

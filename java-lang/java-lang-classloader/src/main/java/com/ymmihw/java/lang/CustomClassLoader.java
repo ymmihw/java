@@ -1,11 +1,14 @@
 package com.ymmihw.java.lang;
 
-import java.io.*;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class CustomClassLoader extends ClassLoader {
 
 
-  public Class getClass(String name) throws ClassNotFoundException {
+  public Class<?> getClass(String name) throws ClassNotFoundException {
     byte[] b = loadClassFromFile(name);
     return defineClass(name, b, 0, b.length);
   }

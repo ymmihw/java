@@ -7,9 +7,7 @@
   <artifactId>java-subject</artifactId>
   <version>0.0.1-SNAPSHOT</version>
  </parent>
- <groupId>com.ymmihw.java</groupId>
  <artifactId>daylight-savings-time</artifactId>
- <version>0.0.1-SNAPSHOT</version>
  <name>daylight-savings-time</name>
  <url>http://maven.apache.org</url>
  <properties>
