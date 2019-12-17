@@ -21,5 +21,6 @@
   <module>java-lang-system</module>
   <module>java-lang-classloader</module>
   <module>java-lang-methodhandle</module>
+  <module>overflow-underflow</module>
  </modules>
 </project>
