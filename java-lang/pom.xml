@@ -23,5 +23,6 @@
   <module>java-lang-methodhandle</module>
   <module>overflow-underflow</module>
   <module>nan</module>
+  <module>strictfp</module>
  </modules>
 </project>
