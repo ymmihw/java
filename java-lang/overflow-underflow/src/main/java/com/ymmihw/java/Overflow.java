@@ -1,35 +1,6 @@
 package com.ymmihw.java;
 
-import java.math.BigInteger;
-
 public class Overflow {
-
-  public static void showIntegerOverflow() {
-
-    int value = Integer.MAX_VALUE - 1;
-
-    for (int i = 0; i < 4; i++, value++) {
-      System.out.println(value);
-    }
-  }
-
-  public static void noOverflowWithBigInteger() {
-
-    BigInteger largeValue = new BigInteger(Integer.MAX_VALUE + "");
-    for (int i = 0; i < 4; i++) {
-      System.out.println(largeValue);
-      largeValue = largeValue.add(BigInteger.ONE);
-    }
-  }
-
-  public static void exceptionWithAddExact() {
-
-    int value = Integer.MAX_VALUE - 1;
-    for (int i = 0; i < 4; i++) {
-      System.out.println(value);
-      value = Math.addExact(value, 1);
-    }
-  }
 
   public static int addExact(int x, int y) {
 
@@ -40,12 +11,6 @@ public class Overflow {
     return r;
   }
 
-  public static void demonstrateUnderflow() {
-
-    for (int i = 1073; i <= 1076; i++) {
-      System.out.println("2^" + i + " = " + Math.pow(2, -i));
-    }
-  }
 
   public static double powExact(double base, double exponent) {
     if (base == 0.0) {
