@@ -22,5 +22,6 @@
   <module>java-lang-classloader</module>
   <module>java-lang-methodhandle</module>
   <module>overflow-underflow</module>
+  <module>nan</module>
  </modules>
 </project>
