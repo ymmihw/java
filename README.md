@@ -10,3 +10,9 @@ java-lang-methodhandle | [Method Handles in Java](http://www.baeldung.com/java-m
 overflow-underflow | [Overflow and Underflow in Java](https://www.baeldung.com/java-overflow-underflow)
 nan | [NaN in Java](https://www.baeldung.com/java-not-a-number)
 strictfp | [The strictfp Keyword in Java](https://www.baeldung.com/java-strictfp)
+
+
+#### java-performance
+Module | Article
+--|--
+java-branch-prediction | [Branch Prediction in Java](https://www.baeldung.com/java-branch-prediction)
