@@ -15,4 +15,9 @@ strictfp | [The strictfp Keyword in Java](https://www.baeldung.com/java-strictfp
 #### java-performance
 Module | Article
 --|--
-java-branch-prediction | [Branch Prediction in Java](https://www.baeldung.com/java-branch-prediction)
+java-branch-prediction | [Branch Prediction in Java](https://www.baeldung.com/java-branch-prediction)	
+
+#### java-syntax
+Module | Article
+--|--
+java-primitive-conversions | [Java Primitive Conversions](https://www.baeldung.com/java-primitive-conversions)
