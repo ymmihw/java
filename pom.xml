@@ -47,5 +47,9 @@
  </build>
  <modules>
   <module>java-performance</module>
+  <module>java-syntax</module>
+  <module>java-lang</module>
+  <module>java-subject</module>
+  <module>java-util</module>
  </modules>
 </project>
