@@ -1,7 +1,8 @@
 package com.ymmihw.java.lang.system;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class EnvironmentVariablesTest {
 
@@ -9,6 +10,6 @@ public class EnvironmentVariablesTest {
   public void givenEnvVars_whenReadPath_thenGetValueinResult() {
     EnvironmentVariables environmentVariables = new EnvironmentVariables();
 
-    Assert.assertNotNull(environmentVariables.getPath());
+    assertNotNull(environmentVariables.getPath());
   }
 }

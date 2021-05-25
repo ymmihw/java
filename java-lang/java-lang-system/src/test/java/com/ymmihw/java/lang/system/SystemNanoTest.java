@@ -1,7 +1,8 @@
 package com.ymmihw.java.lang.system;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SystemNanoTest {
 
@@ -11,6 +12,6 @@ public class SystemNanoTest {
     // do something that takes time
     long endTime = System.nanoTime();
 
-    Assert.assertTrue(endTime - startTime < 10000);
+    assertTrue(endTime - startTime < 10000);
   }
 }

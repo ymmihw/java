@@ -1,10 +1,9 @@
 package com.ymmihw.java.lang;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
@@ -12,11 +11,9 @@ import java.lang.invoke.WrongMethodTypeException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-/**
- * Test case for the {@link MethodHandles} API
- */
+/** Test case for the {@link MethodHandles} API */
 public class MethodHandlesTest {
 
   @Test
@@ -123,14 +120,17 @@ public class MethodHandlesTest {
     assertEquals(12, sum);
   }
 
-  @Test(expected = WrongMethodTypeException.class)
+  @Test
   public void givenSumMethodHandleAndIncompatibleArguments_whenInvokingExact_thenException()
       throws Throwable {
-    MethodHandles.Lookup lookup = MethodHandles.lookup();
-    MethodType mt = MethodType.methodType(int.class, int.class, int.class);
-    MethodHandle sumMH = lookup.findStatic(Integer.class, "sum", mt);
-
-    sumMH.invokeExact(Integer.valueOf(1), 11);
+    assertThrows(
+        WrongMethodTypeException.class,
+        () -> {
+          MethodHandles.Lookup lookup = MethodHandles.lookup();
+          MethodType mt = MethodType.methodType(int.class, int.class, int.class);
+          MethodHandle sumMH = lookup.findStatic(Integer.class, "sum", mt);
+          sumMH.invokeExact(Integer.valueOf(1), 11);
+        });
   }
 
   @Test

@@ -1,9 +1,9 @@
 package com.ymmihw.java;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.math.BigInteger;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class OverflowUnitTest {
 
@@ -40,14 +40,17 @@ public class OverflowUnitTest {
     }
   }
 
-  @Test(expected = ArithmeticException.class)
+  @Test
   public void exceptionWithAddExact() {
-
-    int value = Integer.MAX_VALUE - 1;
-    for (int i = 0; i < 4; i++) {
-      System.out.println(value);
-      value = Math.addExact(value, 1);
-    }
+    assertThrows(
+        ArithmeticException.class,
+        () -> {
+          int value = Integer.MAX_VALUE - 1;
+          for (int i = 0; i < 4; i++) {
+            System.out.println(value);
+            value = Math.addExact(value, 1);
+          }
+        });
   }
 
   @Test
@@ -57,14 +60,10 @@ public class OverflowUnitTest {
     }
   }
 
-
   @Test
   public void doubleTest() {
     assertEquals(Double.MAX_VALUE + 1, Double.MAX_VALUE);
     assertEquals(Double.MAX_VALUE * 2, Double.POSITIVE_INFINITY);
     assertEquals(Double.MAX_VALUE * -2, Double.NEGATIVE_INFINITY);
   }
-
 }
-
-
