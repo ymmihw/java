@@ -11,6 +11,7 @@ overflow-underflow | [Overflow and Underflow in Java](https://www.baeldung.com/j
 nan | [NaN in Java](https://www.baeldung.com/java-not-a-number)
 strictfp | [The strictfp Keyword in Java](https://www.baeldung.com/java-strictfp)
 convert-double-long | [Convert Double to Long in Java](https://www.baeldung.com/java-convert-double-long)
+java-deserialization-vulnerabilities | [Deserialization Vulnerabilities in Java](https://www.baeldung.com/java-deserialization-vulnerabilities)
 
 #### java-performance
 Module | Article
