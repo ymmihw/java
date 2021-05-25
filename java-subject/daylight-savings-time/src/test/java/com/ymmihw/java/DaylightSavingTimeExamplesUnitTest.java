@@ -1,6 +1,8 @@
 package com.ymmihw.java;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -8,8 +10,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
-import org.junit.Ignore;
-import org.junit.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class DaylightSavingTimeExamplesUnitTest {
 
@@ -27,9 +29,10 @@ public class DaylightSavingTimeExamplesUnitTest {
     cal.setTime(dateBeforeDST);
     System.out.println("Before DST (00:55 UTC - 01:55 GMT+1) = " + dateBeforeDST);
 
-    System.out.println("With this Calendar "
-        + (cal.get(Calendar.ZONE_OFFSET) + cal.get(Calendar.DST_OFFSET)) / (60 * 1000)
-        + " minutes must be added to UTC (GMT TimeZone) to get a correct date for this TimeZone\n");
+    System.out.println(
+        "With this Calendar "
+            + (cal.get(Calendar.ZONE_OFFSET) + cal.get(Calendar.DST_OFFSET)) / (60 * 1000)
+            + " minutes must be added to UTC (GMT TimeZone) to get a correct date for this TimeZone\n");
     assertThat(cal.get(Calendar.ZONE_OFFSET)).isEqualTo(3600000);
     assertThat(cal.get(Calendar.DST_OFFSET)).isEqualTo(0);
 
@@ -38,9 +41,10 @@ public class DaylightSavingTimeExamplesUnitTest {
     Date dateAfterDST = cal.getTime();
 
     System.out.println(" After DST (01:05 UTC - 03:05 GMT+2) = " + dateAfterDST);
-    System.out.println("With this Calendar "
-        + (cal.get(Calendar.ZONE_OFFSET) + cal.get(Calendar.DST_OFFSET)) / (60 * 1000)
-        + " minutes must be added to UTC (GMT TimeZone) to get a correct date for this TimeZone\n");
+    System.out.println(
+        "With this Calendar "
+            + (cal.get(Calendar.ZONE_OFFSET) + cal.get(Calendar.DST_OFFSET)) / (60 * 1000)
+            + " minutes must be added to UTC (GMT TimeZone) to get a correct date for this TimeZone\n");
     assertThat(cal.get(Calendar.DST_OFFSET)).isEqualTo(3600000);
     assertThat(dateAfterDST).isEqualTo(df.parse("2018-03-25 03:05"));
 
@@ -51,18 +55,22 @@ public class DaylightSavingTimeExamplesUnitTest {
 
   private void prettyPrint(TimeZone tz) {
 
-    //@formatter:off
-        System.out.println(String.format(
-               "    Zone ID = %s (%s)\n"  
-             + "  RawOffset = %s minutes\n"
-             + "        DST = %s minutes\n"
-             + "  -----------------------------------------",
-             tz.getID(), tz.getDisplayName(), tz.getRawOffset()/60000, tz.getDSTSavings()/60000));
-        //@formatter:on
+    // @formatter:off
+    System.out.println(
+        String.format(
+            "    Zone ID = %s (%s)\n"
+                + "  RawOffset = %s minutes\n"
+                + "        DST = %s minutes\n"
+                + "  -----------------------------------------",
+            tz.getID(),
+            tz.getDisplayName(),
+            tz.getRawOffset() / 60000,
+            tz.getDSTSavings() / 60000));
+    // @formatter:on
   }
 
   @Test
-  @Ignore
+  @Disabled
   public void whenIterating_ThenPrintAllTimeZones() {
     for (String id : TimeZone.getAvailableIDs()) {
       TimeZone tz = TimeZone.getTimeZone(id);

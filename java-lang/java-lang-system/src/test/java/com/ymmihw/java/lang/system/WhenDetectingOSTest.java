@@ -1,10 +1,11 @@
 package com.ymmihw.java.lang.system;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-@Ignore
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+@Disabled
 public class WhenDetectingOSTest {
 
   private DetectOS os = new DetectOS();
@@ -13,13 +14,13 @@ public class WhenDetectingOSTest {
   public void whenUsingSystemProperty_shouldReturnOS() {
     String expected = "Windows 10";
     String actual = os.getOperatingSystem();
-    Assert.assertEquals(expected, actual);
+    assertEquals(expected, actual);
   }
 
   @Test
   public void whenUsingSystemUtils_shouldReturnOS() {
     String expected = "Windows 10";
     String actual = os.getOperatingSystemSystemUtils();
-    Assert.assertEquals(expected, actual);
+    assertEquals(expected, actual);
   }
 }

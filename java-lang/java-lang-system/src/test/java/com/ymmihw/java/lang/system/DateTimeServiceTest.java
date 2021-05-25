@@ -1,7 +1,8 @@
 package com.ymmihw.java.lang.system;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class DateTimeServiceTest {
 
@@ -9,7 +10,7 @@ public class DateTimeServiceTest {
   public void givenClass_whenCalledMethods_thenNotNullInResult() {
     DateTimeService dateTimeService = new DateTimeService();
 
-    Assert.assertNotNull(dateTimeService.nowPlusOneHour());
-    Assert.assertNotNull(dateTimeService.nowPrettyPrinted());
+    assertNotNull(dateTimeService.nowPlusOneHour());
+    assertNotNull(dateTimeService.nowPrettyPrinted());
   }
 }
